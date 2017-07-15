@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 15, 2017 at 11:53 AM
+-- Generation Time: Jul 15, 2017 at 03:51 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -30,11 +30,17 @@ CREATE TABLE `student_assess` (
   `term` int(1) NOT NULL,
   `sid` varchar(20) NOT NULL,
   `school` varchar(20) NOT NULL,
-  `q1` tinyint(1) NOT NULL,
-  `q2` tinyint(1) NOT NULL,
-  `q3` tinyint(1) NOT NULL,
-  `q4` tinyint(1) NOT NULL,
-  `q5` tinyint(1) NOT NULL
+  `q1` int(1) NOT NULL,
+  `q2` int(1) NOT NULL,
+  `q3` int(1) NOT NULL,
+  `q4` int(1) NOT NULL,
+  `q5` int(1) NOT NULL,
+  `c1` varchar(200) NOT NULL,
+  `c2` varchar(200) NOT NULL,
+  `c3` varchar(200) NOT NULL,
+  `c4` varchar(200) NOT NULL,
+  `c5` varchar(200) NOT NULL,
+  `avg` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
