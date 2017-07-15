@@ -1,3 +1,6 @@
+<?php
+session_start();
+echo $_SESSION["username"]?>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -77,6 +80,7 @@
 					<div class="navbar-collapse collapse" id="ftheme">
 
 						<ul class="nav navbar-nav navbar-right">
+						<li><a href="#Hello <?php echo $_SESSION['username']?>"</li>
 							<li><a href="#home">home</a></li>
 							<li><a href="#about">about</a></li>
 							<li class="dropdown">
