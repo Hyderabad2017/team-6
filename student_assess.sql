@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 15, 2017 at 03:34 PM
+-- Generation Time: Jul 15, 2017 at 03:51 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -35,7 +35,11 @@ CREATE TABLE `student_assess` (
   `q3` int(1) NOT NULL,
   `q4` int(1) NOT NULL,
   `q5` int(1) NOT NULL,
-  `comments` varchar(200) NOT NULL,
+  `c1` varchar(200) NOT NULL,
+  `c2` varchar(200) NOT NULL,
+  `c3` varchar(200) NOT NULL,
+  `c4` varchar(200) NOT NULL,
+  `c5` varchar(200) NOT NULL,
   `avg` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
