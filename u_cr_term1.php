@@ -21,7 +21,7 @@ if(isset($_POST["submit"])) {
 	move_uploaded_file($tmp_name,"C://xampp//htdocs//CFG//".$file_name);
 }
 ?>
-<form action="insert_cr_1.php" 	method="post">
+<form action="insert_cr_assess1.php" 	method="post">
 <input type="Submit"  value="proceed">
 
 </html>

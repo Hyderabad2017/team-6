@@ -35,7 +35,7 @@ try {
 
  
 
-$allDataInSheet = $objPHPExcel->getActiveSheet()->toArray(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
+$allDataInSheet = $objPHPExcel->getActiveSheet()->toArray(true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true);
 
 $arrayCount = count($allDataInSheet);  // Here get total count of row in that Excel sheet
 
@@ -71,11 +71,11 @@ $q22=trim($allDataInSheet[$i]["Z"]);
 $q23=trim($allDataInSheet[$i]["AA"]);
 $q24=trim($allDataInSheet[$i]["AB"]);
 $q25=trim($allDataInSheet[$i]["AC"]);
-$q26=trim($allDataInSheet[$i]["AD"]);
-$q27=trim($allDataInSheet[$i]["AE"]);
-$q28=trim($allDataInSheet[$i]["AF"]);
-$total=($q1+$q2+$q3+$q4+$q5+$q6+$q7+$q8+$q9+$q10+$q11+$q12+$q13+$q14+$q15+$q16+$q17+$q18+$q19+$q20+$q21+$q22+$q23+$q24+$q25);
-$query = "insert into student.cls_assm_1(SchoolName,admno,clsroom,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21,q22,q23,q24,q25,total) values('".$SchoolName."','".$admno."','".$q1."','".$q2."','".$q3."','".$q4."','".$q5."','".$q6."','".$q7."','".$q8."','".$q9."','".$q10."','".$q11."','".$q12."','".$q13."','".$q14."','".$q15."','".$q16."','".$q17."','".$q18."','".$q19."','".$q20."','".$q21."','".$q22."','".$q23."','".$q24."','".$q25."','".$total."')";
+#$q26=trim($allDataInSheet[$i]["AD"]);
+#$q27=trim($allDataInSheet[$i]["AE"]);
+#$q28=trim($allDataInSheet[$i]["AF"]);
+$total=($q1+$q2+$q3+$q4+$q5+$q6+$q7+$q8+$q9+$q10+$q11+$q12+$q13+$q14+$q15+$q16+$q17+$q18+$q19+$q20+$q21+$q22);
+$query = "insert into student.cls_assm_1(SchoolName,admno,clsroom,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21,q22,q23,q24,q25,total) values('".$SchoolName."','".$admno."','".$clsroom."','".$q1."','".$q2."','".$q3."','".$q4."','".$q5."','".$q6."','".$q7."','".$q8."','".$q9."','".$q10."','".$q11."','".$q12."','".$q13."','".$q14."','".$q15."','".$q16."','".$q17."','".$q18."','".$q19."','".$q20."','".$q21."','".$q22."','".$q23."','".$q24."','".$q25."','".$total."')";
 
 $row=mysqli_query($conn,$query);
 	if($row){
@@ -85,5 +85,6 @@ $row=mysqli_query($conn,$query);
 		echo "error in creating the table".mysqli_error($conn);
 	}
 
-}?>
+}
+?>
 
