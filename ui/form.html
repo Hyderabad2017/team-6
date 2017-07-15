@@ -1,11 +1,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-    
-	<title>Learning curve foundation</title>
-    <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
-    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Learning curve foundation</title>
 	
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,6 +21,7 @@
         Author: BootstrapMade.com
         Author URL: https://bootstrapmade.com
     ======================================================= -->
+		
 </head>
 
 
@@ -68,7 +65,7 @@
 
 					<div class="navbar-header">
 						
-						<a href="images/header/logo.png" class="navbar-brand"></a>
+						<a href="" class="navbar-brand">LEARNING CURVE FOUNDATION</a>
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ftheme">
 							<span class="sr-only">Toggle</span>
 							<span class="icon-bar"></span>
@@ -82,9 +79,16 @@
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="#home">home</a></li>
 							<li><a href="#about">about</a></li>
-							<li><a href="#service">services</a></li>
-							<li><a href="#portfolio">portfolio</a></li>
-							<li><a href="#contact">contact</a></li>
+							<li><a href="#service">child assessment</a></li>
+							<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">student assessment</a>
+						<ul class="dropdown-menu">
+							<li><a href="cse.html">Add Data</a></li>
+							<li><a href="it.html">Show data</a></li>
+							
+						</ul>
+						</li>
+							<li><a href="#contact">login</a></li>
 							<li class="hidden-sm hidden-xs">
 	                            <a href="#" id="ss"><i class="fa fa-search" aria-hidden="true"></i></a>
 	                        </li>
@@ -104,40 +108,82 @@
 
 	</header>
 <div class="container">
+	<h1><center>DREAM LIFE SKILLS ASSESSMENT SCALE</h1>
 <form>
   <div class="form-group">
     <label for="sid">Student Id</label>
-    <input type="text" class="form-control" id="sid">
+		
+    <input type="text" class="form-control" id="sid" >
+		
   </div>
   <div class="form-group">
     <label for="school">school</label>
-    <input type="text" class="form-control" id="school">
+    <input type="text" class="form-control" id="school"size="15">
   </div>
-  <div class="form-group">
-    <label for="q1">1.Interacting with others</label>
-    <label class="radio-inline"><input type="radio" name="q1">yes</label>
-    <label class="radio-inline"><input type="radio" name="q1">no</label>
-  </div>
-  <div class="form-group">
-    <label for="q2">2.overcoming difficulties and solving problems</label>
-    <label class="radio-inline"><input type="radio" name="q2">yes</label>
-    <label class="radio-inline"><input type="radio" name="q2">no</label>
-  </div>
-  <div class="form-group">
-    <label for="q3">3.Taking Initiative</label>
-    <label class="radio-inline"><input type="radio" name="q3">yes</label>
-    <label class="radio-inline"><input type="radio" name="q3">no</label>
-  </div>
-  <div class="form-group">
-    <label for="q4">4.Managing conflicts</label>
-    <label class="radio-inline"><input type="radio" name="q4">yes</label>
-    <label class="radio-inline"><input type="radio" name="q4">no</label>
-  </div>
-  <div class="form-group">
-    <label for="q5">5.Understanding and following instructions</label>
-    <label class="radio-inline"><input type="radio" name="q5">yes</label>
-    <label class="radio-inline"><input type="radio" name="q5">Option 2</label>
-  </div>
+	<div>
+	<table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Does not yet do</th>
+        <th>Does with lots of help</th>
+				<th>Does with some help</th>
+				<th>Does with a little help</th>
+				<th>Does independently</th>
+				<th>comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.Interacting with others</td>
+        <td><input type="radio" name="q1" value="1"></td>
+				<td><input type="radio" name="q1" value="2"></td>
+				<td><input type="radio" name="q1" value="3"></td>
+				<td><input type="radio" name="q1" value="4"></td>
+				<td><input type="radio" name="q1" value="5"></td>
+        <td><input type="text" id="comment" placeholder="c1"></td>
+      </tr>
+      <tr>
+        <td>2.overcoming difficulties and solving problems</td>
+        <td><input type="radio" name="q2" value="1"></td>
+				<td><input type="radio" name="q2" value="2"></td>
+				<td><input type="radio" name="q2" value="3"></td>
+				<td><input type="radio" name="q2" value="4"></td>
+				<td><input type="radio" name="q2" value="5"></td>
+				<td><input type="text" id="comment" placeholder="c2"></td>
+        
+      </tr>
+      <tr>
+        <td>3.Taking Initiative</td>
+        <td><input type="radio" name="q3" value="1"></td>
+        <td><input type="radio" name="q3" value="2"></td>
+				<td><input type="radio" name="q3" value="3"></td>
+				<td><input type="radio" name="q3" value="4"></td>
+				<td><input type="radio" name="q3" value="5"></td>
+				<td><input type="text" id="comment" placeholder="c3"></td>
+      </tr>
+			<tr>
+        <td>4.Managing conflicts</td>
+        <td><input type="radio" name="q3" value="1"></td>
+        <td><input type="radio" name="q3"value="2"></td>
+				<td><input type="radio" name="q3"value="3"></td>
+				<td><input type="radio" name="q3"value="4"></td>
+				<td><input type="radio" name="q3" value="5"></td>
+				<td><input type="text" id="comment" placeholder="c4"></td>
+      </tr>
+			<tr>
+        <td>5.Understanding and following instructions</td>
+        <td><input type="radio" name="q3"value="1"></td>
+        <td><input type="radio" name="q3"value="2"></td>
+				<td><input type="radio" name="q3"value="3"></td>
+				<td><input type="radio" name="q3"value="4"></td>
+				<td><input type="radio" name="q3"value="5"></td>
+				<td><input type="text" id="comment" placeholder="c5t"></td>
+      </tr>
+    </tbody>
+  </table>
+	</div>
+  
   <div class="form-group">
       
   <div class="dropdown">
@@ -150,6 +196,7 @@
     <li><a href="#">3</a></li>
   </ul>
   </div>
+
 </div>
 
 
