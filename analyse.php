@@ -79,7 +79,7 @@ echo '<h2 style="text-align:center">User Profile</h2>
     <div class="col-sm-6">
       <p>PARENTAL-STATUS:'.$row["parental_status"].'</p>
 	  <p>FAMILY-INCOME:'.$row["family_income"].'</p>
-	  </div>'
+	  </div></div>'
 ?>
 </body>
 </html>
