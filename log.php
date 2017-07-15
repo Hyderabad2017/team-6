@@ -9,10 +9,17 @@ $db_name = "learning_curve";
 $db = mysql_connect($server,$username,$password) or die("Connection to database failed, perhaps the service is down !!");
 mysql_select_db($db_name) or die("Database name not available !!");
 
-$login = mysql_query("select * from login_details where (username = '" . $_REQUEST['username'] . "') and (password = '" . ($_REQUEST['password']) . "')",$db);
-$rowcount = mysql_num_rows($login);
-if ($rowcount == 1) {
-$_SESSION['username'] = $_REQUEST['username'];
+ $query=mysql_query("SELECT * FROM login_details WHERE username='".$user."' AND password='".$pass."'");  
+    $numrows=mysql_num_rows($query);  
+    if($numrows!=0)  
+    {  
+    while($row=mysql_fetch_assoc($query))  
+    {  
+    $dbusername=$row['username'];  
+    $dbpassword=$row['password'];  
+    }  
+ if($user == $dbusername && $pass == $dbpassword)  
+    {  
 echo "connecting";
 //header("Location: securedpage.php");
 }
