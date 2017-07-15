@@ -106,27 +106,108 @@
 			</nav>
 		</div>
 
-	
-
+	</header>
 <div class="container">
-<form action="u_term1.php" method="post" enctype="multipart/form-data">
-<h2>Select file to upload for term 1:</h2>
-<br>
-    </br>
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    </br>
-    
-    <input type="submit" value="Upload file" name="submit">
-</form>
+	<h1><center>DREAM LIFE SKILLS ASSESSMENT SCALE</h1>
+<form>
 
-<br>
-<br></br>
-<form action="u_term2.php" method="post" enctype="multipart/form-data">
-    <h2>Select file to upload for term 2:</h2><br></br>
-    <input type="file" name="fileToUpload" id="fileToUpload"></br>
-    <input type="submit" value="Upload file" name="submit">
+  <div class="form-group">
+		<div class="col-xs-4" col-xs-offset-4>
+    <label for="sid">Student Id</label>
+		
+    <input type="text" class="form-control" id="sid" >
+		</div>
+  </div>
+	</br></br></br>
+  <div class="form-group">
+			<div class="col-xs-4" col-xs-offset-4>
+    <label for="school">school</label>
+    <input type="text" class="form-control" id="school"size="15">
+		</div>
+  </div>
+	</br>
+	<div>
+	<table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Does not yet do</th>
+        <th>Does with lots of help</th>
+				<th>Does with some help</th>
+				<th>Does with a little help</th>
+				<th>Does independently</th>
+				<th>comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.Interacting with others</td>
+        <td><input type="radio" name="q1" value="1"></td>
+				<td><input type="radio" name="q1" value="2"></td>
+				<td><input type="radio" name="q1" value="3"></td>
+				<td><input type="radio" name="q1" value="4"></td>
+				<td><input type="radio" name="q1" value="5"></td>
+        <td><input type="text" id="c1" placeholder="comment"></td>
+      </tr>
+      <tr>
+        <td>2.overcoming difficulties and solving problems</td>
+        <td><input type="radio" name="q2" value="1"></td>
+				<td><input type="radio" name="q2" value="2"></td>
+				<td><input type="radio" name="q2" value="3"></td>
+				<td><input type="radio" name="q2" value="4"></td>
+				<td><input type="radio" name="q2" value="5"></td>
+				<td><input type="text" id="c2" placeholder="comment"></td>
+        
+      </tr>
+      <tr>
+        <td>3.Taking Initiative</td>
+        <td><input type="radio" name="q3" value="1"></td>
+        <td><input type="radio" name="q3" value="2"></td>
+				<td><input type="radio" name="q3" value="3"></td>
+				<td><input type="radio" name="q3" value="4"></td>
+				<td><input type="radio" name="q3" value="5"></td>
+				<td><input type="text" id="c3" placeholder="comment"></td>
+      </tr>
+			<tr>
+        <td>4.Managing conflicts</td>
+        <td><input type="radio" name="q3" value="1"></td>
+        <td><input type="radio" name="q3"value="2"></td>
+				<td><input type="radio" name="q3"value="3"></td>
+				<td><input type="radio" name="q3"value="4"></td>
+				<td><input type="radio" name="q3" value="5"></td>
+				<td><input type="text" id="c4" placeholder="comment"></td>
+      </tr>
+			<tr>
+        <td>5.Understanding and following instructions</td>
+        <td><input type="radio" name="q3"value="1"></td>
+        <td><input type="radio" name="q3"value="2"></td>
+				<td><input type="radio" name="q3"value="3"></td>
+				<td><input type="radio" name="q3"value="4"></td>
+				<td><input type="radio" name="q3"value="5"></td>
+				<td><input type="text" id="c5" placeholder="comment"></td>
+      </tr>
+    </tbody>
+  </table>
+	</div>
+  
+  <div class="form-group">
+      
+  <div class="dropdown">
+      <label for="term">Term</label>
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">select
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+  </ul>
+  </div>
+
+</div>
+
+
+  <button type="submit" class="btn btn-default">Submit</button>
 </form>
 </div>
-</header>
 </body>
 </html>
