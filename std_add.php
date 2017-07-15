@@ -10,7 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-//$term = $_REQUEST["term"];
+$term = $_REQUEST["term"];
 $sid = $_REQUEST["sid"];
 $school = $_REQUEST["school"];
 $q1 = $_REQUEST["q1"];
@@ -24,8 +24,8 @@ $c3 = $_REQUEST["c3"];
 $c4 = $_REQUEST["c4"];
 $c5 = $_REQUEST["c5"];
 $avg = ($q1 + $q2 + $q3 + $q4 + $q5)/5;
-$sql = "INSERT INTO student_assess (sid,school,q1,q2,q3,q4,q5,c1,c2,c3,c4,c5,avg)  
-VALUES ('$sid','$school','$q1','$q2','$q3','$q4','$q5','$c1','$c2','$c3','$c4','$c5','$avg')"; //adding data to database
+$sql = "INSERT INTO student_assess (term,sid,school,q1,q2,q3,q4,q5,c1,c2,c3,c4,c5,avg)  
+VALUES ('$term','$sid','$school','$q1','$q2','$q3','$q4','$q5','$c1','$c2','$c3','$c4','$c5','$avg')"; //adding data to database
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {

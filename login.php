@@ -1,13 +1,13 @@
 <?php  
-if(isset($_REQUEST["submit"])){  
+if(isset($_POST["submit"])){  
   
-if(!empty($_REQUEST['user']) && !empty($_POST['pass'])) {  
-    $user=$_REQUEST['user'];  
-    $pass=$_REQUEST['pass'];  
+if(!empty($_POST['user']) && !empty($_POST['pass'])) {  
+    $user=$_POST['user'];  
+    $pass=$_POST['pass'];  
   
     $con=mysql_connect('localhost','root','') or die(mysql_error());  
     mysql_select_db('learning_curve') or die("cannot select DB");  
-  
+      
     $query=mysql_query("SELECT * FROM login_details WHERE username='".$user."' AND password='".$pass."'");  
     $numrows=mysql_num_rows($query);  
     if($numrows!=0)  
