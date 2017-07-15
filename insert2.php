@@ -58,12 +58,18 @@ $avg=($q1+$q2+$q3+$q4+$q5)/5;
 $query = "insert into student.stu_assm2(SchoolName,admno,q1,q2,q3,q4,q5,avg) values('".$SchoolName."','".$admno."','".$q1."','".$q2."','".$q3."','".$q4."','".$q5."','".$avg."')";
 
 $row=mysqli_query($conn,$query);
-	if($row){
-		echo "table contacts created successfully";
+if($row){
+		echo "data updated successfully";
+		
 	}
 	else{
-		echo "error in creating the table".mysqli_error($conn);
+		echo "Sorry, Could not update data due to error-".mysqli_error($conn);
 	}
 
 }?>
+
+<form action="form.html" 	method="post">
+<input type="Submit"  value="Home Page">
+
+</html>
 

@@ -59,11 +59,16 @@ $query = "insert into student.stu_assm(SchoolName,admno,q1,q2,q3,q4,q5,avg) valu
 
 $row=mysqli_query($conn,$query);
 	if($row){
-		echo "table contacts created successfully";
+		echo "data updated successfully";
+		
 	}
 	else{
-		echo "error in creating the table".mysqli_error($conn);
+		echo "Sorry, Could not update data due to error-".mysqli_error($conn);
 	}
 
 }?>
 
+<form action="form.html" 	method="post">
+<input type="Submit"  value="Home Page">
+
+</html>

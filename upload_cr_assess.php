@@ -79,16 +79,23 @@
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="#home">home</a></li>
 							<li><a href="#about">about</a></li>
-							<li><a href="#service">child assessment</a></li>
 							<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">student assessment</a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">classroom assessment</a>
 						<ul class="dropdown-menu">
-							<li><a href="cse.html">Add Data</a></li>
+							<li><a href="classroom_form.html">Add Data</a></li>
 							<li><a href="it.html">Show data</a></li>
 							
 						</ul>
 						</li>
-							<li><a href="#contact">login</a></li>
+							<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">student assessment</a>
+						<ul class="dropdown-menu">
+							<li><a href="form.html">Add Data</a></li>
+							<li><a href="it.html">Show data</a></li>
+							
+						</ul>
+						</li>
+						</li><li><a href="#contact">login</a></li>
 							<li class="hidden-sm hidden-xs">
 	                            <a href="#" id="ss"><i class="fa fa-search" aria-hidden="true"></i></a>
 	                        </li>

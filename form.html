@@ -80,9 +80,9 @@
 							<li><a href="#home">home</a></li>
 							<li><a href="#about">about</a></li>
 							<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">student assessment</a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">classroom assessment</a>
 						<ul class="dropdown-menu">
-							<li><a href="cse.html">Add Data</a></li>
+							<li><a href="classroom_form.html">Add Data</a></li>
 							<li><a href="it.html">Show data</a></li>
 							
 						</ul>
@@ -90,10 +90,11 @@
 							<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">student assessment</a>
 						<ul class="dropdown-menu">
-							<li><a href="cse.html">Add Data</a></li>
+							<li><a href="form.html">Add Data</a></li>
 							<li><a href="it.html">Show data</a></li>
 							
 						</ul>
+						</li>
 						</li>
 							<li><a href="#contact">login</a></li>
 							<li class="hidden-sm hidden-xs">
@@ -116,6 +117,11 @@
 	</header>
 <div class="container">
 	<h1><center>DREAM LIFE SKILLS ASSESSMENT SCALE</h1>
+	<form action="upload.php">
+	<input type="Submit" value="Upload Excel Files">
+	</form>	
+	
+	
 <form action="std_add.php">
 
   <div class="form-group">
@@ -198,13 +204,17 @@
 	</div>
   
   <div class="form-group">
-       <label for="term" >TERM</label>
-<select name="term">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  
-</select>
+      
+  <div class="dropdown">
+      <label for="term">Term</label>
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">select
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu"  name="term">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+  </ul>
+  </div>
 
 </div>
 

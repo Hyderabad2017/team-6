@@ -119,10 +119,10 @@ if(isset($_POST["submit"])) {
 	$file_name=$_FILES["fileToUpload"]["name"];
 	$_SESSION["filename"]=$file_name;
     if($check!=0) {
-        echo "File is an excel - " . $check["mime"] . ".";
+        echo "Your file is accepted and will be processed " . $check["mime"] . ".";
         $uploadOk = 1;
     } else {
-        echo "File is not an image.";
+        echo "Please upload the file in excel format";
         $uploadOk = 0;
     }
 	move_uploaded_file($tmp_name,"C://xampp//htdocs//CFG//".$file_name);

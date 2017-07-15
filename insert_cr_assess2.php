@@ -78,13 +78,18 @@ $total=($q1+$q2+$q3+$q4+$q5+$q6+$q7+$q8+$q9+$q10+$q11+$q12+$q13+$q14+$q15+$q16+$
 $query = "insert into student.cls_assm_2(SchoolName,admno,clsroom,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21,q22,q23,q24,q25,total) values('".$SchoolName."','".$admno."','".$clsroom."','".$q1."','".$q2."','".$q3."','".$q4."','".$q5."','".$q6."','".$q7."','".$q8."','".$q9."','".$q10."','".$q11."','".$q12."','".$q13."','".$q14."','".$q15."','".$q16."','".$q17."','".$q18."','".$q19."','".$q20."','".$q21."','".$q22."','".$q23."','".$q24."','".$q25."','".$total."')";
 
 $row=mysqli_query($conn,$query);
-	if($row){
-		echo "table contacts created successfully";
+if($row){
+		echo "data updated successfully";
+		
 	}
 	else{
-		echo "error in creating the table".mysqli_error($conn);
+		echo "Sorry, Could not update data due to error-".mysqli_error($conn);
 	}
 
-}
-?>
+}?>
+
+<form action="form.html" 	method="post">
+<input type="Submit"  value="Home Page">
+
+</html>
 
