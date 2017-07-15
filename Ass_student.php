@@ -18,6 +18,7 @@ $q2 = $_REQUEST["q2"];
 $q3 = $_REQUEST["q3"];
 $q4 = $_REQUEST["q4"];
 $q5 = $_REQUEST["q5"];
+$avg = ($q1 + $q2 + $q3 + $q4 + $q5)/5;
 $sql = "INSERT INTO student_assess (term,sid,school,q1,q2,q3,q4,q5);
 VALUES ('$term','$sid','$school','$q1','$q2','$q3','$q4','$q5')";
 if ($conn->query($sql) === TRUE) {
@@ -27,4 +28,5 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-?> 
+?>
+
