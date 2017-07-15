@@ -19,7 +19,7 @@ $q3 = $_REQUEST["q3"];
 $q4 = $_REQUEST["q4"];
 $q5 = $_REQUEST["q5"];
 $sql = "INSERT INTO student_assess (term,sid,school,q1,q2,q3,q4,q5);
-VALUES ('term','sid','school','$q1','$q2','$q3','$q4','$q5')";
+VALUES ('$term','$sid','$school','$q1','$q2','$q3','$q4','$q5')";
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
