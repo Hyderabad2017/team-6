@@ -1,3 +1,22 @@
+<?php
+//echo "ncje";
+$servername = "localhost"; // add you user name pass and db name
+$username = "root";
+$password = "";
+$dbname = "learning_curve";
+//echo "ncje";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+$query = mysqli_query($conn,"select avg from student_assess");
+$result = array();
+$count=0;
+while ($row = mysqli_fetch_assoc($query)){
+     $result[$count]=$row['avg'];
+	 $count=$count+1;//echo $row['avg'];
+ }
+  
+ $final=json_encode($result);
+?>
 <html>
 <head>
 <title>Highcharts Tutorial</title>
@@ -7,33 +26,8 @@
 <body>
 <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
 <script language="JavaScript">
-var garr=new Array;
 $(document).ready(function() {  
-//retrieve();
- $.ajax({
-    url: 'jsonda.php',
-      type: 'POST',
-           
-            data: 'id=testdata',
-            dataType: 'json',
-            async: false,
-    success: function(data) {
-        //var chartData=[];
-       // var retdata = jQuery.parseJSON(data);
-        //var length =data.length;
-
-            for(var i=0; i<2; i++){
-               garr[i]=data[i+4];
-			   alert(garr[i]);
-			   // var jsDate = new Date(retdata[i][0]*1000); 
-                //var datejs = jsDate.getFullYear()+','+jsDate.getMonth()+','+jsDate.getDate();
-
-            }
-           // chart.series[0].setData(retdata);
-//chart.redraw();
-        },
-    cache: false
- });
+var data_click = <?php echo $final; ?>;
    var chart = {
       type: 'bar'
    };
@@ -85,15 +79,14 @@ $(document).ready(function() {
       enabled: false
    };
 
-        var a=garr[0];
-        var b=garr[1];
-
+        var a = garr[0];
+        var b = garr[1];
+//alert(a);
    var series= [{
          name: 'student',
-            data: [4,5]
+            data: [2,3]
           }
    ];     
-  
 
 function openData() {
  var fromDate =$('#startDate').val();
